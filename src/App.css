@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,700&display=swap');
+:root{
+  --sidebar-flex:1.5;
+  --condiv-flex:6;
+  --fontsize-p:1.2rem;
+  --fontsize-nav:1.6rem;
+  --typing-font:3rem;
+}
+
+*
+{
+  margin:0;
+  padding: 0;
+}
+
+body
+{
+  font-family: 'Ubuntu';
+}
+
+nav
+{
+  padding: 60px 30px 0px 30px ;
+  /* flex:var(--sidebar-flex); */
+  /* background: rgb(238,103,143); */
+  /* background: linear-gradient(180deg, rgba(238,103,143,1) 50%, rgba(132,124,252,1) 80%); */
+
+  background: rgb(69,70,92);
+  background: linear-gradient(180deg, rgba(69,70,92,1) 0%, rgba(2,31,45,1) 100%);
+}
+
+nav ul
+{
+  font-size:var(--fontsize-nav) ;
+  text-align: center;
+  list-style-type: none;
+  /* text-decoration: none; */
+  /* color: white !important; */
+}
+
+/* Home, Education, Projects, Skills */
+nav ul a
+{
+  text-decoration: none;
+  color: white;
+}
+
+/* left-side nav bar padding  */
+nav ul li
+{
+  margin:40px;
+}
+
+/* css for active class */
+.active
+{
+  /* font-weight: bolder; */
+  text-decoration: underline;
+}
+
+.App
+{
+display: flex;
+width: 100vw;
+min-height: 100vh;
+}
+
+/* .condiv class is for the right side content container*/
+.condiv
+{
+  padding: 100px ;
+  background-color: #f4f5f9;
+  flex:var(--condiv-flex);
+}
+
+/* home */
+
+/* for profilePic */
+.profilepic img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: .5rem solid gray;
+}
+
+.subtopic img {
+  width: 300px;
+  height: 300px;
+}
+/*------------------*/
+
+/* profile messages: Hello! ... */
+.profile h2 {
+  margin-top: 25px;
+  text-align: center;
+}
+
+/* social media nav bar under profile msg */
+.social
+{
+  display: flex;
+  margin-top: 25px;
+  margin-left: 30px;
+  justify-content: center;
+}
+
+/* social media icons */
+.social i
+{
+  padding-right: 30px;
+  font-size: 30px;
+  color: #9a9b9c;
+}
+
+.social i:hover
+{
+  opacity: 0.4;
+}
+
+.updates {
+  margin: 35px 0px 35px 0px;
+}
+
+.updates li {
+  margin: 15px 0px 15px 20px;
+  font-style: italic;
+}
+
+.goals li {
+  margin: 15px 0px 15px 20px;
+}
+
+.resources {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 250px 25px 0 0;
+}
+
+.resources li {
+  margin: 15px 0px 15px 20px;
+}
+
+/* -------------------------------------*/
+/* subtopic to first itme = 35px margin */
+/* -------------------------------------*/
+
+/* education */
+.widecard
+{
+  border:0px solid #9a9b9c;
+  margin: 30px 0px 0px 0px;
+  padding: 5px 10px;
+}
+
+.widecard:hover
+{
+  color: #1b1d20;
+  background-color: #D3D3D3;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  border: .1px solid gray;
+  cursor: pointer;
+}
+
+/* school and enrollment date */
+.school {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* contents within items in education tab */
+.eduBlock h3 {
+  margin: 5px;
+}
+
+/* projects */
+.project_item {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 45px;
+}
+
+/* div that holds icons */
+.tools {
+  position: absolute;
+  display: flex;
+  height: 80px;
+  margin-top: 15px;
+  /* border-style: */
+}
+
+.tools img:hover {
+  opacity: 0.4;
+}
+
+.tools i
+{
+  width: 45px;
+  height: 45px;
+  margin: 20px 0;
+  padding-right: 30px;
+  font-size: 45px;
+  color: #9a9b9c;
+}
+
+.tools i:hover
+{
+  opacity: 0.4;
+}
+
+/* for riot games api and lolchess.gg icon */
+.bots_img {
+  margin-top: 3.5px;
+}
+
+.bots_img img {
+  width: 45px;
+  height: 45px;
+  padding-right: 30px;
+  padding-top: 15px;
+}
+/*----------------------------------*/
+
+.project_description {
+  margin-top: 60px;
+}
+
+.project_description img {
+  width: 1200px;
+}
+
+.project_description p {
+  margin-top: 15px;
+  margin-bottom: 35px;
+}
+
+/* hover to navigate to github from project preview */
+
+.container {
+  position: relative;
+  width: 1200px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: white;
+}
+
+.overlay i {
+  font-size: 50px;
+}
+
+.text {
+  color: black;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .overlay {
+  opacity: 0.6;
+}
+/*-------------------------------------------------------*/
+
+/* skills */
+.frontend {
+  margin-top: 40px;;
+}
+
+.frontend i {
+  font-size: 85px;
+  margin: 25px 15px;
+}
+
+.frontend i:hover {
+  opacity: 0.2;
+}
+
+.backend {
+  margin-top: 40px;;
+}
+
+.backend i {
+  font-size: 75px;
+  margin: 25px 15px;
+}
+
+.backend i:hover {
+  opacity: 0.2;
+}
+
+.developTools {
+  margin-top: 40px;;
+}
+
+.developTools h2 {
+  margin-bottom: 25px;
+}
+
+.developTools i {
+  font-size: 75px;
+  margin: 25px 15px;
+}
+
+.developTools i:hover {
+  opacity: 0.2;
+}
+
+/* scroll to top in projects tab */
+.scroll-to-top {
+  width:106.38px;
+}
+
+.scroll-to-top button {
+  cursor: pointer;
+  margin-top: 5px;
+  padding: 15px;
+}
